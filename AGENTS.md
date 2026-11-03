@@ -1,7 +1,9 @@
-# Documentation and handoff rules
+# Release maintenance instructions
 
-Read README.md and docs/ARCHITECTURE.md before editing. This is a public architecture/handoff repository, not a verified production source checkout.
+Read docs/SYSTEM_GUIDE.md and docs/OPERATIONS.md. Keep these as the canonical descriptive and operational documents; do not create parallel copies of the same facts.
 
-Use logical aliases for deployment resources. Do not publish internal hosts, exact deployment addresses, credential values, SAS URLs, profile/prompt data, private operator records or the full server preservation archive. Distinguish owner descriptions, inspected code, proposed design and verified deployed behavior.
+This is a scrubbed, production-oriented source subset with explicit deployment-evidence gaps. Verify the source manifest and current entry points before adding/removing code. Preserve provenance and existing originals. Keep Function helper copies separate where their packaging requires them; do not unify them without deployment tests.
 
-Preserve existing material and update the evidence status when new app/exporter source or Azure metadata is inspected. Never execute production scripts, redeploy, stop jobs or change resource visibility merely to validate documentation. Keep a separate restricted resource register for exact locations and authorized operations. Document source-to-deployment ownership and recovery limitations rather than inferring them.
+Never publish credentials, signed URLs, user records, local.settings.json, exact internal resource registers or preservation archives. Populate configuration only outside Git. Do not execute production scripts, send email, run model jobs, redeploy, alter visibility or modify Azure settings merely to test this repository.
+
+Public claims must distinguish architecture/source evidence from successful runtime tests and measured business outcomes. A future Teams agent should cite the knowledge index and canonical source sections, respect access tiers and retain uncertainty. This repository does not deploy such an agent.

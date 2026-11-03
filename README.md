@@ -1,25 +1,35 @@
-# Legislation Intelligence: architecture and handoff
+# Legislative Intelligence Platform
 
-Start here to understand the system without needing access to its server or Azure resources. This public repository documents the connections and operator responsibilities; it does not contain user profiles, production data, credentials or an exact server replica.
+A source-based handoff for a legislative document pipeline, Streamlit application and Azure Functions. It explains the implementation end to end without distributing production documents, user records or credentials.
 
-The application has several independently maintained parts:
+Start with the [system guide and architecture](docs/SYSTEM_GUIDE.md) or the [five-page architecture overview](docs/Legislative_Intelligence_System_Overview.pdf). Use the [operator runbook](docs/OPERATIONS.md) for setup, updates, troubleshooting and recovery. The [source manifest](docs/SOURCE_MANIFEST.json) records provenance, scrubbing and exclusions; the [knowledge index](docs/knowledge-index.json) points future question-answering tools at those canonical documents.
 
-1. **Server pipeline:** obtains legislative documents and runs AI extraction, synthesis, standardization and scoring.
-2. **Blob Storage:** holds source/intermediate data, curated results and app-ready snapshots.
-3. **Web application:** presents searchable/filterable results and user-specific features.
-4. **Cosmos DB:** stores user-related application information, confirmed by the project owner.
-5. **Export bridge and digest:** inspected local Azure Function code exports user prompts/profile inputs from Cosmos to Blob Storage and implements a scheduled email digest. Live Function deployments still need verification.
+## Repository layout
 
-Read the [connection map](docs/ARCHITECTURE.md), then the [component directory](docs/COMPONENT_MAP.md). Operators should use the [handoff runbook](docs/OPERATIONS.md) and complete the [Azure inventory checklist](docs/AZURE_INVENTORY.md).
+| Directory | Independently operated component |
+|---|---|
+| `components/pipeline/` | Server ingestion, AI extraction, synthesis, standardization, prediction and personalization source |
+| `components/webapp/` | Streamlit application, registered pages, authentication, persistence and data loaders |
+| `components/functions/` | Prompt-export and digest timer Functions, with their own dependencies and helper copies |
+| `docs/` | One system guide, one runbook, evidence/configuration manifests and standalone architecture PDF |
+| `tools/` | Offline release checks; no production imports or connections |
 
-## What is verified
+The source uses the original component-relative layout. Separate Function helpers are retained because they belong to a separate deployment package; they are not automatically synchronized with the web app's copies.
 
-This initial map combines the owner's November 3, 2026 description with static inspection of the November 2 server snapshot. Server source paths are listed relative to the legislation project, so readers can locate implementations without publishing internal hosts or deployment addresses. The local Streamlit web-app source and exporter/digest Function source have now been inspected. The supplied web-app deployment log matches the local HEAD. Azure portal settings, live access-control behavior, actual Function deployments and site health remain unverified. See [the web-app source map](docs/WEB_APP.md).
+## Evidence boundary
 
-The [existing legislative intelligence hub](https://github.com/terbe2022/uiuc-legislative-intelligence-hub) currently contains documentation. It must not be mistaken for a verified source checkout of the deployed web app. The owner has identified a local Git checkout containing the web app and Function sources; exact local/deployment locations are recorded in the restricted register. A GitHub source mirror has not yet been established by this documentation work.
+The web-app source matches the local Git revision in the owner's successful deployment log. Azure CLI/portal output confirms the app/Function hosting, deployed timer names and relevant storage/database metadata. Server source comes from the verified November 2 preservation snapshot; its actual scheduler entry is still unverified. The current local Function source differs from a saved local deployment ZIP and has not been matched to the active Azure package. “Running” and “Enabled” are not evidence of successful end-to-end execution.
 
-## Public documentation versus restricted records
+This is the production-oriented, source-traced subset, not a claim that every selected server file is currently scheduled. It contains no speculative implementation or new application behavior. The remaining evidence gaps are listed in the runbook.
 
-Public docs use logical aliases such as `WEB-APP`, `PROFILE-STORE` and `RESULTS-STORE`. Authorized operators need a separate restricted register mapping these aliases to exact Azure resources, repository/commit identities, server paths, owners and credential-management locations. Credentials themselves must stay in approved secret storage. A private repo is not automatically approved storage for secrets or user records.
+## Safe review
 
-No production jobs, account settings, deployment resources or resource visibility were changed to prepare this handoff. Source import, deployment verification and a full recovery exercise remain separate work.
+```sh
+python tools/verify_release.py
+```
+
+This parses source, verifies manifest hashes and local documentation links, and checks for excluded files and embedded credential patterns. It does not launch Streamlit, connect to Azure, run the model, send email or execute pipeline jobs. Actual use requires approved data/configuration and dependencies; there is no synthetic replacement for the production model or user records in this source release.
+
+Embedded signed URLs/credential literals are externalized into environment settings listed in each component's `.env.example`. Those files are inventories, not automatically loaded everywhere. Preserve current configuration through an approved secret-management process before attempting a deployment. Do not deploy this scrubbed copy over a running installation without restoring and validating its configuration.
+
+Source import baseline: [6e355a6](https://github.com/terbe2022/legislation-intelligence-IGPA/commit/6e355a65eebd25cbc2ad8166f270cf63f142a1e9). Documentation consolidation is committed separately.

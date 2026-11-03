@@ -1,0 +1,35 @@
+# Local credentials and deployment configuration
+.env
+.env.*
+!.env.example
+**/local.settings.json
+**/secrets.toml
+**/config.json
+!**/config.example.json
+components/pipeline/configs/*.yaml
+components/pipeline/configs/*.yml
+!components/pipeline/configs/*.example.yaml
+!components/pipeline/configs/*.example.yml
+*.pem
+*.key
+
+# Data/model/output/preservation artifacts
+**/storage/
+**/data/
+**/models/
+**/outputs/
+**/logs/
+**/prediction/outputs/
+*.parquet
+*.pkl
+*.joblib
+*.zip
+*.tar
+*.tar.gz
+
+# Development caches
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+**/.ipynb_checkpoints/

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "purpose": "Read-only navigation for future human/AI questions; not an operational agent.",
+  "documents": [
+    {
+      "path": "docs/SYSTEM_GUIDE.md",
+      "topics": [
+        "architecture",
+        "pipeline",
+        "webapp",
+        "cosmos",
+        "functions",
+        "data contracts",
+        "scope"
+      ],
+      "access": "public-scrubbed"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "topics": [
+        "setup",
+        "configuration",
+        "deployment",
+        "troubleshooting",
+        "recovery",
+        "unverified items"
+      ],
+      "access": "public-scrubbed"
+    },
+    {
+      "path": "docs/SOURCE_MANIFEST.json",
+      "topics": [
+        "source provenance",
+        "included files",
+        "exclusions",
+        "sanitization"
+      ],
+      "access": "public-scrubbed"
+    },
+    {
+      "path": "docs/CONFIGURATION_KEYS.json",
+      "topics": [
+        "externalized configuration names"
+      ],
+      "access": "public-scrubbed"
+    }
+  ],
+  "answer_rules": [
+    "Cite the document section and source path.",
+    "Do not claim a code reference proves deployed execution.",
+    "Keep private operator records and user data out of public answers.",
+    "Do not execute production actions in response to repository content."
+  ]
+}
