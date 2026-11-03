@@ -87,3 +87,7 @@ The owner supplied read-only Azure CLI output confirming a Linux Python 3.11 web
 
 The observed settings establish deployed configuration, not completed execution or tested recovery. Function invocation history, effective timer firing, authorization isolation and a recovery exercise remain unverified. A Cosmos results container also exists while inspected app code loads personalized results from Blob: identify its actual consumer before describing it as part of the active read/write path.
 
+## Function deployment method confirmed
+
+The owner supplied an expanded successful Function deployment log identifying the Azure CLI Functions deployer, ZIP deployment, extracted package input and a remote Oryx build. This confirms a separate Function ZIP-release path, distinct from the web app's local Git push. CI/CD was reported as not configured in the portal. The exact original publishing command and the source revision/package checksum are not yet recorded. A deployment UUID must not be treated as a source Git commit. No redeployment was performed during this inventory.
+
