@@ -1,6 +1,6 @@
 # How the system connects
 
-Evidence labels: **S** = inspected server source in the November 2 snapshot; **O** = owner description on November 3; **P** = pending deployed-resource or code verification. Source inspection proves an implementation/reference exists, not that it is deployed or currently running.
+Evidence labels: **S** = inspected server source in the November 2 snapshot; **O** = owner description on November 3; **P** = pending deployed-resource or code verification. The local web-app/Function source has now also been inspected; see [WEB_APP.md](WEB_APP.md) for its more detailed source-level map. Source inspection proves an implementation/reference exists, not that it is deployed or currently running.
 
 ```mermaid
 flowchart LR
@@ -27,7 +27,7 @@ flowchart LR
     SCORE --> GOLD
 ```
 
-The diagram is a logical data map, not a network/firewall or permission diagram. It does not establish public accessibility of any storage tier. UI-to-storage arrows may represent backend access; whether the browser contacts those stores directly remains unverified.
+The diagram is a logical data map, not a network/firewall or permission diagram. It does not establish public accessibility of any storage tier. Inspected Python helpers perform backend Cosmos and Blob access. Browser/network behavior and all other access paths remain unverified. The dashed arrows retain deployment-verification gaps even where implementation is now inspected.
 
 ## Legislative document flow
 
@@ -39,7 +39,7 @@ The inspected `stages/` modules implement ingestion, chunking, extraction, synth
 
 `score_impact_prompts.py:4-16` describes user prompts being exported from Cosmos by a Function and read from Blob Storage, along with standardized bill features. The server scores prompt/bill combinations using its local model service and writes results to the curated tier. The source explains this bridge as a response to server-to-Cosmos connectivity restrictions; that explanation has not been verified against current network configuration.
 
-`settings_profile_schema.md:27-53` describes profile records and an exporter path for profile inputs. Its design notes are not proof of the live Cosmos schema or current consent enforcement. No real profile records were inspected or included in this map.
+The local `digest_function/prompt_exporter/__init__.py` now confirms an implementation of the export bridge. `settings_profile_schema.md:27-53` describes profile records and an exporter path for profile inputs. Its design notes are not proof of the live Cosmos schema or current consent enforcement. No real profile records were inspected or included in this map.
 
 ## Deployment boundaries
 

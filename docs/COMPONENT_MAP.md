@@ -15,8 +15,9 @@ Paths below are relative to the preserved server project. They are source naviga
 | App-ready data | `build_app_snapshot.py` | Snapshot/trail generation, active-bill filtering, output schema and refresh dependencies |
 | Personalized impact scoring | `score_impact_prompts.py`, `score_chunks.py` | Exported input consumption, per-user/prompt/bill results and downstream permissions |
 | Profile design notes | `settings_profile_schema.md` | Intended fields, consent semantics and integration assumptions; compare with actual app code |
-| User interface and application backend | **Source repository/path pending** | Pages/routes, APIs, profile persistence, storage reads, auth and error handling |
-| Cosmos-to-Blob exporter | **Source repository/path pending**; referenced in `score_impact_prompts.py` | Function trigger, exported types, schemas, permissions, freshness and failure behavior |
+| User interface and application backend | Local app checkout: `app.py`, `views/`, `user_auth.py`, `user_profile.py`, `team_service.py` | Streamlit UI, persistence, app-side authentication/session logic and loaders; see WEB_APP.md |
+| Cosmos-to-Blob exporter | App checkout: `digest_function/prompt_exporter/__init__.py` and `function.json` | `%PROMPT_EXPORT_CRON%` timer, exported inputs, permissions/freshness; deployed settings pending |
+| Email digests | App checkout: `digest_function/digest_timer/__init__.py`, `function.json`, `email_service.py` | `%DIGEST_CRON%` timer, Cosmos and Blob reads, AI generation, email and Blob state |
 | Monitoring and scheduling | Server `logs/`, external job-monitor project; actual scheduler pending | Last successful run by stage/component, alerts, ownership and recovery instructions |
 
 Multiple entry-point and backfill scripts exist. Do not choose an entry point merely because its filename says “daily” or “production.” Match it to the actual scheduler/deployment before documenting an executable run procedure.
@@ -36,4 +37,4 @@ Minimum contracts to establish:
 
 ## Sources and their limits
 
-The server snapshot verifies the named files and code references. The owner confirms that the live system has a web app, Cosmos profile storage and Blob data storage. Azure resource names, deployment IDs, source repos for the app/exporter, resource permissions, runtime settings and live data contracts remain unverified. Do not infer a deployed component from an example config or a roadmap note.
+The server snapshot verifies the named files and code references. The owner confirms that the live system has a web app, Cosmos profile storage and Blob data storage. Azure resource names, deployment IDs, a GitHub mirror for the app/exporter, resource permissions, actual runtime settings and live data contracts remain unverified. The local checkout is identified and its app/exporter/digest source inspected; the supplied web deployment log matches its HEAD. Do not infer a deployed component from an example config or a roadmap note.

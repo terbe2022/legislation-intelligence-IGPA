@@ -4,8 +4,8 @@ Start with metadata and schema, not data exports. The public map needs component
 
 ## First items to provide
 
-1. The GitHub URL or editing/deployment location for the actual web-app source.
-2. The source location for the Cosmos-to-Blob exporter Function, if deployed.
+1. **Located:** local Git checkout for the Streamlit web app. Confirm its intended GitHub mirror and live deployment resource/settings.
+2. **Located:** exporter and digest source under the app checkout’s `digest_function/`. Confirm their deployed Function app, source version, timer setting values/timezone and successful invocations.
 3. A redacted resource-group inventory showing resource **types**, component roles and which resources connect. Map actual names to aliases before sharing publicly.
 
 ## Inventory by component
