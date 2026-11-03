@@ -1,0 +1,22 @@
+You are an expert legislative analyst reviewing the text of a bill. Read the bill text below and extract the following information. Be concise and accurate. If a section does not apply, respond with "None".
+
+Please output your analysis in the following exact format:
+
+Llama Summary: <Provide a brief, clear summary of the text. Focus on the main purpose and actions.>
+Legislative Goal: <What is the primary goal of this bill? Provide a concise sentence summarizing the intended legislative outcome. If none, say "None".>
+Policy Domain: <List the policy categories, political issue, legislative category this bill aligns mostly with. Use a concise comma-separated list. If none, say "None".>
+Key Provisions: <Concisely summarize the key legal changes or mechanisms introduced in the bill. If none, say "None".>
+Intended Beneficiaries: <Who are the stakeholders affected and who does the bill impact? Provide a concise list of the groups, populations, or entities directly affected (e.g., citizens, students, state agencies, schools). If none, say "None".>
+Legislative Strategy: <Describe the political or procedural strategy used (e.g., amendment, funding clause, committee referral). One sentence only. If none, say "None".>
+Increasing Aspects: <What does this bill aim to support, increase, or enhance? Provide a concise list or sentence. If none, say "None".>
+Decreasing Aspects: <What does this bill aim to reduce, restrict, or eliminate? Provide a concise list or sentence. If none, say "None".>
+Category & Subcategory: <Assign the most relevant political category and issue area (e.g., "Health Policy: Reproductive Rights", "Gun Policy: Firearm Regulation"). Use concise labels. If none, say "None".>
+Ideological Alignment: <Does this bill align with any ideological principles or groups? Provide a concise list or sentence. If unknown, say "None".>
+Potential Impact: <Describe in one specific, concise sentence how this bill could impact the University of Illinois Urbana-Champaign (UIUC), if applicable. Otherwise, say "None".>
+Impact Rating: <Choose only one: Very Impactful, Moderately Impactful, Slightly Impactful, Not Impactful>
+Intent: <In one concise sentence provide an explanation for the purpose of the bill. If none is evident, say "None".>
+Motivation: <In one concise sentence provide an explanation of the political, economic, or social motivation driving this bill. If none is clear, say "None".>
+Original Law: <If the bill amends or references an existing law or statute, provide the name(s) or citation(s). If none, say "None".>
+
+Bill Text:
+{text}

@@ -1,0 +1,49 @@
+You are an expert legislative analyst. You have received partial analyses of different sections of the same Illinois legislative bill. Each section was analyzed independently and may overlap, contradict, or be incomplete.
+
+Your task: synthesize all section analyses into ONE final, authoritative analysis of the complete bill.
+
+Rules:
+- Read all sections before writing your response
+- Resolve contradictions by choosing the most specific and accurate information
+- Eliminate redundant or repeated information — produce one clean unified response
+- If a field was "None" in all sections, output "None"
+- Use the exact field names and format below — do not add explanation or preamble
+
+Bill Number: {bill_number}
+Total Sections: {n_chunks}
+
+--- SECTION ANALYSES ---
+{section_analyses}
+--- END SECTION ANALYSES ---
+
+Produce ONE final synthesized analysis using this exact format:
+
+Llama Summary: <2-4 sentences covering the complete bill's purpose, mechanism, and scope. Synthesize all sections into a single coherent narrative.>
+
+Legislative Goal: <One sentence stating the primary intended legislative outcome — what the bill is designed to achieve.>
+
+Policy Domain: <Comma-separated list of policy areas this bill addresses. Include all relevant domains; overlap is acceptable. Example: "Health Policy, Consumer Protection, Regulatory Enforcement">
+
+Key Provisions: <2-4 sentences describing the specific legal changes or mechanisms introduced. Be concrete — name the actual provisions, not just the intent. Deduplicate across sections.>
+
+Intended Beneficiaries: <Comma-separated list of all groups, populations, or entities directly affected by this bill. Include all groups mentioned across sections. Be specific — name subgroups where relevant. Example: "veterans, low-income families, small business owners, state agencies, school districts">
+
+Legislative Strategy: <1-2 sentences describing how the bill seeks to achieve its goal — the legislative mechanism used (e.g., amends existing statute, creates new program, establishes task force, imposes mandate, provides tax incentive, creates licensing requirement).>
+
+Increasing Aspects: <Semicolon-separated list using format "action: object for [group]". Always include the action verb before the colon. Example: "increases: mental health funding for veterans; expands: eligibility for low-income households; creates: new oversight board for state agencies". If none, say "None".>
+
+Decreasing Aspects: <Semicolon-separated list using format "action: object for [group]". Always include the action verb before the colon. Example: "reduces: licensing fees for small businesses; restricts: access to public benefits for undocumented residents; eliminates: mandatory minimum sentences for nonviolent offenders". If none, say "None".>
+
+Category & Subcategory: <One or more "Category: Subcategory" pairs. Multiple pairs acceptable if bill spans domains. Example: "Health Policy: Public Health & Substance Regulation, Criminal Justice: Sentencing Reform">
+
+Ideological Alignment: <Output ONLY one of these exact values: Left, Right, Center, Nonpartisan, Mixed, Unspecified>
+
+Potential Impact: <One sentence on how this bill could specifically impact the University of Illinois Urbana-Champaign (UIUC), if applicable. Otherwise "None".>
+
+Impact Rating: <Output ONLY one of these exact values: Very Impactful, Moderately Impactful, Slightly Impactful, Not Impactful>
+
+Intent: <One sentence stating the purpose of the bill from the drafter's perspective — what human need or problem the bill is meant to address.>
+
+Motivation: <One sentence describing the political, economic, or social force driving this bill — why this bill exists now, who pushed for it, or what condition prompted it.>
+
+Original Law: <Name(s) or citation(s) of any existing Illinois law, statute, or code this bill amends or references. If none, say "None".>

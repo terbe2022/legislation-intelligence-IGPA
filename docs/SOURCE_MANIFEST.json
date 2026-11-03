@@ -574,6 +574,20 @@
       "source_sha256": "466d84394b083f0c3b3872e14ad46fdd5d8e25fe0c26a3019d951dd551c83ee6",
       "release_sha256": "466d84394b083f0c3b3872e14ad46fdd5d8e25fe0c26a3019d951dd551c83ee6",
       "changes": []
+    },
+    {
+      "path": "components/pipeline/prompts/feature_extraction_v1.txt",
+      "source_relative": "prompts/feature_extraction_v1.txt",
+      "source_sha256": "dd8dcefde4586ff3f49a88ceee25096745922fe3eac7f6590ff15b37a601e7ee",
+      "release_sha256": "dd8dcefde4586ff3f49a88ceee25096745922fe3eac7f6590ff15b37a601e7ee",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/prompts/synthesis_prompt_v1.txt",
+      "source_relative": "prompts/synthesis_prompt_v1.txt",
+      "source_sha256": "b0360558e6840089d62109006f5a1b47ef416df8a56787477566f7946e67776b",
+      "release_sha256": "b0360558e6840089d62109006f5a1b47ef416df8a56787477566f7946e67776b",
+      "changes": []
     }
   ],
   "excluded_source_candidates": [

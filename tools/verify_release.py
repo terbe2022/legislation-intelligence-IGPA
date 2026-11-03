@@ -39,6 +39,13 @@ for path in ROOT.rglob("*"):
                 target = path.parent / link.split("#")[0]
                 if not target.exists():
                     failures.append("Broken document link: " + relative + " -> " + link)
+# Selected configuration's versioned prompt templates are runtime assets.
+for config in (ROOT / "components/pipeline/configs").glob("*.example.yaml"):
+    text = config.read_text(encoding="utf-8")
+    for value in re.findall(r"(?m)^\s*(?:prompt_path|synthesis_prompt_path):\s*([^\s#]+)", text):
+        value = value.strip("\"'")
+        if not (ROOT / "components/pipeline" / value).is_file():
+            failures.append("Missing configured prompt asset: " + value)
 for module in ("webapp", "functions", "pipeline"):
     if not (ROOT / "components" / module / "requirements.txt").exists():
         failures.append("Missing captured component requirements: " + module)
