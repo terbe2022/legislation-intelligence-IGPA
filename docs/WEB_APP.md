@@ -80,3 +80,10 @@ Do not repeat `git push azure master` simply to verify this map: that command de
 | Digest operation | `APP_BASE_URL`, `IMPACT_RESULTS_PATH`, `DIGEST_STATE_PREFIX`, `DIGEST_DRY_RUN`, `DIGEST_STATE_FREEZE`, `DIGEST_DIAG`, `DIGEST_TEST_RECIPIENT` |
 
 This list was extracted statically; some settings are optional, have defaults or control diagnostic/test behavior. Verify each consumer and deployment independently rather than treating all names as required everywhere.
+
+## Azure metadata verified after source inspection
+
+The owner supplied read-only Azure CLI output confirming a Linux Python 3.11 web runtime with a Streamlit startup command, both named Functions deployed, and a running Function app assigned to a Linux dedicated App Service plan. The container metadata confirms distinct user, session, saved-item, team, diagnostic and results stores. Exact resource identities, partition keys, TTL values, operational flags and backup settings are maintained in the restricted register.
+
+The observed settings establish deployed configuration, not completed execution or tested recovery. Function invocation history, effective timer firing, authorization isolation and a recovery exercise remain unverified. A Cosmos results container also exists while inspected app code loads personalized results from Blob: identify its actual consumer before describing it as part of the active read/write path.
+
