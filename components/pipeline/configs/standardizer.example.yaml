@@ -1,0 +1,11 @@
+bill_limit: null
+concurrency: 3
+features_profile: synthesized/llama31_1200
+mode: live
+model_name: llama31-8b-awq
+profile: llama31_1200
+run_tier2: true
+sessions:
+- 1801
+slos: {}
+vllm_url: http://localhost:8000

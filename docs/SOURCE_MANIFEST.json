@@ -1,0 +1,863 @@
+{
+  "release_date": "2026-11-03",
+  "webapp_source_commit": "aab47ea853657e38381ed52230372377e49da240",
+  "webapp_evidence": "Local tracked source matches owner-supplied successful deployment log; no live app execution in review.",
+  "pipeline_evidence": "November 2 preservation snapshot; selected wrapper call graph; actual scheduler pending.",
+  "functions_evidence": "Current local source; deployed ZIP identity unknown. Saved local ZIP differs in digest/email source.",
+  "registered_web_pages": [
+    "home.py",
+    "views/6_My_Tracker.py",
+    "views/1_Trends.py",
+    "views/2_Explorer.py",
+    "views/4_Active_Bills.py",
+    "views/5_Validation.py",
+    "views/7_Roadmap.py"
+  ],
+  "source_files": [
+    {
+      "path": "components/webapp/.streamlit/config.toml",
+      "source_relative": ".streamlit/config.toml",
+      "source_sha256": "bf87f7f4ddee1b67a69b7222d3ece0779790607da14b24beb64aaaea187f0460",
+      "release_sha256": "bf87f7f4ddee1b67a69b7222d3ece0779790607da14b24beb64aaaea187f0460",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/a11y.py",
+      "source_relative": "a11y.py",
+      "source_sha256": "59eff27137ff0fe0603e9e1a9798ecd9e157a9713e6946973f604e7ec4e700f9",
+      "release_sha256": "59eff27137ff0fe0603e9e1a9798ecd9e157a9713e6946973f604e7ec4e700f9",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/ai_briefing.py",
+      "source_relative": "ai_briefing.py",
+      "source_sha256": "0fb23fdd8b152cf1db660d3433c767aada9da3127da588db94ff35daa3e7cb75",
+      "release_sha256": "ce6d37c0ab24533f7daf54641ed85f2ffbc3aab186bcdbfb158fe97e9afaad8a",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/webapp/app.py",
+      "source_relative": "app.py",
+      "source_sha256": "1e2b10e343916280ee27a3512805395def70d5d26c7d9e143ed71671d893985f",
+      "release_sha256": "57ffd00a15c2287c4fd88b2c582fc08eb53269f202ff7922286f04f2a2d4b7f0",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/webapp/app_theme.py",
+      "source_relative": "app_theme.py",
+      "source_sha256": "f21d0b283125cbd65a535774dd3a5b4f54907f6a4fafc96be2340e658999f8a2",
+      "release_sha256": "f21d0b283125cbd65a535774dd3a5b4f54907f6a4fafc96be2340e658999f8a2",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/auth_utils.py",
+      "source_relative": "auth_utils.py",
+      "source_sha256": "7ba914cbb22ec3a193fd1e9a018f1dcd1e8939d62745e056ea4eb71845a61144",
+      "release_sha256": "7ba914cbb22ec3a193fd1e9a018f1dcd1e8939d62745e056ea4eb71845a61144",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/chart_a11y.py",
+      "source_relative": "chart_a11y.py",
+      "source_sha256": "22dec7636e1d32c912baf18298b9dc12af8d06585d71262d0d1458f7caec2757",
+      "release_sha256": "22dec7636e1d32c912baf18298b9dc12af8d06585d71262d0d1458f7caec2757",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/data_catalog.py",
+      "source_relative": "data_catalog.py",
+      "source_sha256": "246af3dce43f4fa9077d1a23b0a0bcf3ddcea41df85ed4b676562389fcdc62b8",
+      "release_sha256": "17f8390bebdf5d1b0afeb956b6eb1c9cd24243413a93f5fd226250b693ede685",
+      "changes": [
+        "Externalized 38 deployment/credential string expression(s).",
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/email_service.py",
+      "source_relative": "email_service.py",
+      "source_sha256": "23cdef53290db71aaa09c0302c33f2f114ba72f8ece33f9504a9541a564e2383",
+      "release_sha256": "308ee1417e97fa27371f9d50e8a26729026be0ab88645d7280463f30348e8637",
+      "changes": [
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/histogram_filters.py",
+      "source_relative": "histogram_filters.py",
+      "source_sha256": "4f0edd73bee62fcc1c220001ef66859416e11b90fcdc6f6b76793d6bfd13ebae",
+      "release_sha256": "4f0edd73bee62fcc1c220001ef66859416e11b90fcdc6f6b76793d6bfd13ebae",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/home.py",
+      "source_relative": "home.py",
+      "source_sha256": "64e92a22c1923a5647c6f5285499dfd40bfce37160fe31c1c58abfc12bff84c7",
+      "release_sha256": "64e92a22c1923a5647c6f5285499dfd40bfce37160fe31c1c58abfc12bff84c7",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/impact_loader.py",
+      "source_relative": "impact_loader.py",
+      "source_sha256": "6e5f7f05d7e79f569bc2ee56c3ffbbc18e7757d111249e5fae124dbbed84183b",
+      "release_sha256": "6e5f7f05d7e79f569bc2ee56c3ffbbc18e7757d111249e5fae124dbbed84183b",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/intended_beneficiary_taxonomy2.json",
+      "source_relative": "intended_beneficiary_taxonomy2.json",
+      "source_sha256": "124deafb1ac21c575096c2009dab55e8dda737830afaed337540084517b879b0",
+      "release_sha256": "124deafb1ac21c575096c2009dab55e8dda737830afaed337540084517b879b0",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/investigation_loader.py",
+      "source_relative": "investigation_loader.py",
+      "source_sha256": "10a407fe9de3694a12c254561cb40b14d0365db3b34c121210c0c8fc7ed3ba2c",
+      "release_sha256": "d7e9149f31c092d9f6534aa6f675493d48b1eb87efd1f0f02be4f41538ac06eb",
+      "changes": [
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/predictions_loader.py",
+      "source_relative": "predictions_loader.py",
+      "source_sha256": "394574e3bcdc76ff1647808f559e25b8d9a14cadcf8b0e51ab9e10a57a8d5ebe",
+      "release_sha256": "394574e3bcdc76ff1647808f559e25b8d9a14cadcf8b0e51ab9e10a57a8d5ebe",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/requirements.txt",
+      "source_relative": "requirements.txt",
+      "source_sha256": "c71ee340e5d175d93a3fa150cbe7e73d5adf297f1f224468546e519dca308fcd",
+      "release_sha256": "c71ee340e5d175d93a3fa150cbe7e73d5adf297f1f224468546e519dca308fcd",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/semantic_search.py",
+      "source_relative": "semantic_search.py",
+      "source_sha256": "43d918108fb7b2d43539c13e7e98a7dc799271400787017ac40f414508689ffa",
+      "release_sha256": "43d918108fb7b2d43539c13e7e98a7dc799271400787017ac40f414508689ffa",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/team_service.py",
+      "source_relative": "team_service.py",
+      "source_sha256": "a123ec2f62ba0c243b3cf63742fd15b712c64dc43a692c774605d57fed708f98",
+      "release_sha256": "6fb98e86aa805f0f82ab8d1e3bb319f219c63dc21ec75a36ce206bfe7dcbd5e0",
+      "changes": [
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/user_auth.py",
+      "source_relative": "user_auth.py",
+      "source_sha256": "c18fa0cbb7146f5bbcccf30fc7d3cdff7b14d7e52bcaa363fd1aa96546e89d98",
+      "release_sha256": "116a515abb8b0f1bfe146b22dfc76db4d659eec154fe3e15b8c1e76764bce9ba",
+      "changes": [
+        "Externalized 2 deployment/credential string expression(s).",
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/user_profile.py",
+      "source_relative": "user_profile.py",
+      "source_sha256": "51b46116830f12be4f57d040bbd26153e0f5d9e4a4523f4542e5b9def319c765",
+      "release_sha256": "9df0c3a0aa9d4484552611b0bc17f40f54feddfb6a9d44cc3944eb737c3a589c",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s).",
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/vendor/wordcloud2.js",
+      "source_relative": "vendor/wordcloud2.js",
+      "source_sha256": "0b354fb46b1a843decbb0d002ec4696461f52bd375efe082833a54c7e65e16fe",
+      "release_sha256": "0b354fb46b1a843decbb0d002ec4696461f52bd375efe082833a54c7e65e16fe",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/views/1_Trends.py",
+      "source_relative": "views/1_Trends.py",
+      "source_sha256": "b505e1ff455962b5cb0eab52e302fde4c96b0086b595b030edf823696139244a",
+      "release_sha256": "b505e1ff455962b5cb0eab52e302fde4c96b0086b595b030edf823696139244a",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/views/2_Explorer.py",
+      "source_relative": "views/2_Explorer.py",
+      "source_sha256": "0caa2300e50e09a59deace76c93d2c797327c0d07a24fe49e6d8e8d0b45e03c7",
+      "release_sha256": "0caa2300e50e09a59deace76c93d2c797327c0d07a24fe49e6d8e8d0b45e03c7",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/views/4_Active_Bills.py",
+      "source_relative": "views/4_Active_Bills.py",
+      "source_sha256": "c4f76b8edccbe2d10c6e2193afa46ea8e062ac4628d4f16c1de584f3d4dc997b",
+      "release_sha256": "c4f76b8edccbe2d10c6e2193afa46ea8e062ac4628d4f16c1de584f3d4dc997b",
+      "changes": []
+    },
+    {
+      "path": "components/webapp/views/5_Validation.py",
+      "source_relative": "views/5_Validation.py",
+      "source_sha256": "cf5ca144ef4759b43673829d2f790bec263069b09e8811796523bbaafeae7a69",
+      "release_sha256": "40cbdef0eaa72ba41999bfc70bafc82ac5208bc507fcecdb8810b19beca0059f",
+      "changes": [
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/views/6_My_Tracker.py",
+      "source_relative": "views/6_My_Tracker.py",
+      "source_sha256": "c4d01013066101d052c3b027c4a7c3789affe9a473e5c79e285785db9f940d97",
+      "release_sha256": "f32bce9f115062ae29fec0300f1edd90759206de3b0937f32a57f89e8f433184",
+      "changes": [
+        "Externalized 2 deployment/credential string expression(s).",
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/webapp/views/7_Roadmap.py",
+      "source_relative": "views/7_Roadmap.py",
+      "source_sha256": "43c8fcee8cbb18d95053e433971760792f8b79fa68dc6e03ca4f6d8f38390f15",
+      "release_sha256": "ae3c2ff246a613f023bb1a8d6f7e3f4abaf386ce6aed4954ca41f8d0f59b6b92",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s).",
+        "Normalized CRLF to LF for Git transport."
+      ]
+    },
+    {
+      "path": "components/functions/data_catalog.py",
+      "source_relative": "data_catalog.py",
+      "source_sha256": "d14b07fec6d819001a54dc422339e33539ee45ab59c907d14c024e6a067a7398",
+      "release_sha256": "c73bc701465cae77f20cd42d531511d34356bcfefba073dd76e66bbec14eeb71",
+      "changes": [
+        "Externalized 34 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/functions/digest_timer/__init__.py",
+      "source_relative": "digest_timer/__init__.py",
+      "source_sha256": "41f819bbb9198463c2cfb1fd012bffb08b3df462b87918aac86f3dcce5c5a259",
+      "release_sha256": "72c28b60b081c79456da396faaf311ba7d01e0a016a8a8506165df0ee3926794",
+      "changes": [
+        "Externalized 2 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/functions/digest_timer/function.json",
+      "source_relative": "digest_timer/function.json",
+      "source_sha256": "aebb2825cc82ee4d50aed24e3069a5400becfa8ca71acbfccbf4f48e27c061ee",
+      "release_sha256": "aebb2825cc82ee4d50aed24e3069a5400becfa8ca71acbfccbf4f48e27c061ee",
+      "changes": []
+    },
+    {
+      "path": "components/functions/email_service.py",
+      "source_relative": "email_service.py",
+      "source_sha256": "370ff0c3ab6af131d9bad3ad4caccd32f265f21eabe1e759bc57ab5968c788ad",
+      "release_sha256": "370ff0c3ab6af131d9bad3ad4caccd32f265f21eabe1e759bc57ab5968c788ad",
+      "changes": []
+    },
+    {
+      "path": "components/functions/host.json",
+      "source_relative": "host.json",
+      "source_sha256": "13afb1d31f4e36fd52c51479aaff6b088cfb01d95aa42ffbd2d58ca1d24784f4",
+      "release_sha256": "13afb1d31f4e36fd52c51479aaff6b088cfb01d95aa42ffbd2d58ca1d24784f4",
+      "changes": []
+    },
+    {
+      "path": "components/functions/prompt_exporter/__init__.py",
+      "source_relative": "prompt_exporter/__init__.py",
+      "source_sha256": "ca5f0d9436a49babc97b4d30d255ec26b0c133631d98d1ac7eed56b4f934f743",
+      "release_sha256": "14fb1123588de1492797b9b338384f87a9230a7c0981304f94f9f54a29284272",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/functions/prompt_exporter/function.json",
+      "source_relative": "prompt_exporter/function.json",
+      "source_sha256": "cf85c5c1773a6a7c0b557a3dd7fcab937576277e86b9dd732621d6c5b05bb435",
+      "release_sha256": "cf85c5c1773a6a7c0b557a3dd7fcab937576277e86b9dd732621d6c5b05bb435",
+      "changes": []
+    },
+    {
+      "path": "components/functions/requirements.txt",
+      "source_relative": "requirements.txt",
+      "source_sha256": "2c6c34c2408d5cd23c970f8006a2f6d03cb14a11351bd8e6793e47053ba2c89b",
+      "release_sha256": "2c6c34c2408d5cd23c970f8006a2f6d03cb14a11351bd8e6793e47053ba2c89b",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/beneficiary_taxonomy.py",
+      "source_relative": "beneficiary_taxonomy.py",
+      "source_sha256": "db8e86728690af0e838fd14e5527242d0b5eb60f65a6b010dde2f4d6129a746f",
+      "release_sha256": "db8e86728690af0e838fd14e5527242d0b5eb60f65a6b010dde2f4d6129a746f",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/build_app_snapshot.py",
+      "source_relative": "build_app_snapshot.py",
+      "source_sha256": "847e03445f62674b0c60bf493997ce95b944af87e31280b8d382c1969ead5484",
+      "release_sha256": "2c7095e165218ed5ac97facba54ad25a14fbba281de7a606180f611e490dbdc1",
+      "changes": [
+        "Externalized 3 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/build_diffs.py",
+      "source_relative": "build_diffs.py",
+      "source_sha256": "ac762c3199357bfcdfcebd426033d04c6f7d395a6c4971b382fbc98ff33b395d",
+      "release_sha256": "ac762c3199357bfcdfcebd426033d04c6f7d395a6c4971b382fbc98ff33b395d",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/build_probability_trail.py",
+      "source_relative": "build_probability_trail.py",
+      "source_sha256": "9a42423c0f551b71424af1f92ccf33b0d4eaa9a3032854e1e78d62e99a82deb3",
+      "release_sha256": "4c43a7a4a3d5ce69523b8e5917ab0ff4fd8f347b9d18339eebc2ee8b2a0dddb4",
+      "changes": [
+        "Externalized 2 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/data_catalog.py",
+      "source_relative": "data_catalog.py",
+      "source_sha256": "ede99cc27e4557f0c243b6af881701a5c26a0eed1f68a09cb52cccaf39e22153",
+      "release_sha256": "da1a75a410ea8eb40b30398cd389d8b9f04d8fa9eb719148e988aec241c57a2b",
+      "changes": [
+        "Externalized 36 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/intended_beneficiary_taxonomy2.json",
+      "source_relative": "intended_beneficiary_taxonomy2.json",
+      "source_sha256": "124deafb1ac21c575096c2009dab55e8dda737830afaed337540084517b879b0",
+      "release_sha256": "124deafb1ac21c575096c2009dab55e8dda737830afaed337540084517b879b0",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/investigate_flagged_bills_v2.py",
+      "source_relative": "investigate_flagged_bills_v2.py",
+      "source_sha256": "4aaca7739d75baf8283ca6ef1ee4996c693aa26e55f908f0b8cb89d00533babb",
+      "release_sha256": "4aaca7739d75baf8283ca6ef1ee4996c693aa26e55f908f0b8cb89d00533babb",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/requirements.txt",
+      "source_relative": "requirements.txt",
+      "source_sha256": "f3bbf1ebf9a09fecfd2f1df5a4bf1e8bb9eff6f8d3ae74f37361eb89de9e3641",
+      "release_sha256": "f3bbf1ebf9a09fecfd2f1df5a4bf1e8bb9eff6f8d3ae74f37361eb89de9e3641",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/requirements_pipeline.txt",
+      "source_relative": "requirements_pipeline.txt",
+      "source_sha256": "15684e1df0decbe04b1e755ae607b977b499984952dd821f770ae2f7cceb3055",
+      "release_sha256": "15684e1df0decbe04b1e755ae607b977b499984952dd821f770ae2f7cceb3055",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/run_daily.py",
+      "source_relative": "run_daily.py",
+      "source_sha256": "106b648bbf92b6693ecac0218110a9c5485d10e72067ce50f542297641a49172",
+      "release_sha256": "b7e4849bb0063d0cfda5c131ac0efcb0f6c81176037ca534909ffe554e87fe6a",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/run_legislation_daily.py",
+      "source_relative": "run_legislation_daily.py",
+      "source_sha256": "7247a434de6abbe0a96883d16302d6c084dc6dd940c025a29878adae20345e35",
+      "release_sha256": "93536af00f16fb5f7c2208ea44d7021aec5cac70dee1953013145e5c3714ed3c",
+      "changes": [
+        "Externalized 4 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/score_impact_prompts.py",
+      "source_relative": "score_impact_prompts.py",
+      "source_sha256": "ab9a1091121f65195072a8d7ffbeb917c90d34051bd1aaa36cbb3add5d86a0f6",
+      "release_sha256": "0366b5e2e4d861d451b1ec76c32c8c7258f1f49df35c88d65c4e79283de2e7e0",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/scripts/run_daily_with_vllm_check.sh",
+      "source_relative": "scripts/run_daily_with_vllm_check.sh",
+      "source_sha256": "ef28f1368d2c8f98669bbcea10fa75adb0d12a8ebdec8515eefeddbfd6435e3a",
+      "release_sha256": "1832a2c55075d2a7605bb50da66ee5a6cc1f97ed19b134d9d3f7652f18fa3bfa",
+      "changes": [
+        "Scrubbed shell locations/credential literals; source before activation must be reviewed."
+      ]
+    },
+    {
+      "path": "components/pipeline/scripts/run_personalization.sh",
+      "source_relative": "scripts/run_personalization.sh",
+      "source_sha256": "dde1a4646f9be696c575d87d9725ee34a525cd9e4eec47198e59cbefc0446979",
+      "release_sha256": "f6cf39d2bf511aa2ea3a0d217fd61215b6582359e4628448276db610dd00d873",
+      "changes": [
+        "Scrubbed shell locations/credential literals; source before activation must be reviewed."
+      ]
+    },
+    {
+      "path": "components/pipeline/scripts/start_vllm.sh",
+      "source_relative": "scripts/start_vllm.sh",
+      "source_sha256": "9d243b7b85128f832827485d3874d952272fc28371e859f3bf00067d2d4232e1",
+      "release_sha256": "2a89f0f7ce2f66e49fcd812e4e778a680fb42d1a668c88ee283f1a12432d8253",
+      "changes": [
+        "Scrubbed shell locations/credential literals; source before activation must be reviewed."
+      ]
+    },
+    {
+      "path": "components/pipeline/services/azure_blob_service.py",
+      "source_relative": "services/azure_blob_service.py",
+      "source_sha256": "db5a3dc3403e89b26aa524368da886591427f8ddf4d3453cd5dfd5b8d59c518c",
+      "release_sha256": "db5a3dc3403e89b26aa524368da886591427f8ddf4d3453cd5dfd5b8d59c518c",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/services/ilga_service.py",
+      "source_relative": "services/ilga_service.py",
+      "source_sha256": "7993bd16815ce481b086c083bcf91c7d1c26a70730e99f66f239c54247594c8b",
+      "release_sha256": "7993bd16815ce481b086c083bcf91c7d1c26a70730e99f66f239c54247594c8b",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/services/inference_service.py",
+      "source_relative": "services/inference_service.py",
+      "source_sha256": "a6da6c4863566fc410f9670e90b4b2155a6233ef2f938e0c80cb315d0d9e1fa4",
+      "release_sha256": "a6da6c4863566fc410f9670e90b4b2155a6233ef2f938e0c80cb315d0d9e1fa4",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/services/legiscan_service.py",
+      "source_relative": "services/legiscan_service.py",
+      "source_sha256": "1cc7873e6fdc1355cfffd79cfb2bcab67b72521ad6d930bec3327355ee74aae2",
+      "release_sha256": "1cc7873e6fdc1355cfffd79cfb2bcab67b72521ad6d930bec3327355ee74aae2",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/services/ollama_service.py",
+      "source_relative": "services/ollama_service.py",
+      "source_sha256": "db67aafe29faf2ea0b92a8212c0261e8821193c868e4a31e907b8a0c17bf0c38",
+      "release_sha256": "db67aafe29faf2ea0b92a8212c0261e8821193c868e4a31e907b8a0c17bf0c38",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/services/vllm_service.py",
+      "source_relative": "services/vllm_service.py",
+      "source_sha256": "4d24b3a03dd98908e620719a55e1cb47be86a5416836660803fa0c304ba1c367",
+      "release_sha256": "4d24b3a03dd98908e620719a55e1cb47be86a5416836660803fa0c304ba1c367",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/stage2_transformers.py",
+      "source_relative": "stage2_transformers.py",
+      "source_sha256": "f27519549aa8c1c323451e8cdb792542f0e0e2cb8ebde7ec2b5773908bd83f1b",
+      "release_sha256": "f27519549aa8c1c323451e8cdb792542f0e0e2cb8ebde7ec2b5773908bd83f1b",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/stages/chunker.py",
+      "source_relative": "stages/chunker.py",
+      "source_sha256": "a55e7642cada48b66bebb0876107b355fd0157476fbee8663353f82c6d93474d",
+      "release_sha256": "a55e7642cada48b66bebb0876107b355fd0157476fbee8663353f82c6d93474d",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/stages/embedder.py",
+      "source_relative": "stages/embedder.py",
+      "source_sha256": "bffbf2691bac0f47c81d1088298930ae5739e7d95d87d60d7a688b3377f98f4c",
+      "release_sha256": "bffbf2691bac0f47c81d1088298930ae5739e7d95d87d60d7a688b3377f98f4c",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/stages/extractor.py",
+      "source_relative": "stages/extractor.py",
+      "source_sha256": "a1689e2d6688123ddac33234e4d304050e62e95d82e6209dc59d5b71777f15ec",
+      "release_sha256": "0adf77457a92f8cac874e4a25e55dd6ca03fe3cf58778c0087e7c7b1d513e2a9",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/stages/ingestion.py",
+      "source_relative": "stages/ingestion.py",
+      "source_sha256": "300da08a58f43a1c837c4f86b8e463855bec330558c57ab9e3ad071369108788",
+      "release_sha256": "c4e90aa34cc758272e012e0b77533927beef9ad8abe149a91ad15e626682afa1",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/stages/standardizer.py",
+      "source_relative": "stages/standardizer.py",
+      "source_sha256": "e6cf0255d786eeaf09699d2d6b4cb151bf94fdfa6b37dbfef70d2784bac56ae0",
+      "release_sha256": "e6cf0255d786eeaf09699d2d6b4cb151bf94fdfa6b37dbfef70d2784bac56ae0",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/stages/synthesizer.py",
+      "source_relative": "stages/synthesizer.py",
+      "source_sha256": "c3bd9cfae14d205f7021e651379e0a91dde8052dfdf62edbd884dbe5ceec0b83",
+      "release_sha256": "783536e385b76e259687c48ed6bb95e8c4dc971b6a69ed25bfe36fd6c3b9c67a",
+      "changes": [
+        "Externalized 1 deployment/credential string expression(s)."
+      ]
+    },
+    {
+      "path": "components/pipeline/tools/chunk_cache.py",
+      "source_relative": "tools/chunk_cache.py",
+      "source_sha256": "85a0cd75a2e7f66ca2668a636f28310f59742c691ee921a7f423653ea55c6ba2",
+      "release_sha256": "85a0cd75a2e7f66ca2668a636f28310f59742c691ee921a7f423653ea55c6ba2",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/bill_normalize.py",
+      "source_relative": "utils/bill_normalize.py",
+      "source_sha256": "a730ccad67fb49839ef847a12daaf62c2c4b4f19e6bd06fc81453e4f05cb8afd",
+      "release_sha256": "a730ccad67fb49839ef847a12daaf62c2c4b4f19e6bd06fc81453e4f05cb8afd",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/config_loader.py",
+      "source_relative": "utils/config_loader.py",
+      "source_sha256": "6452e66ed39eea84b32e9e6120c14328d0e4f023d6ced63933bd92751366aa0b",
+      "release_sha256": "6452e66ed39eea84b32e9e6120c14328d0e4f023d6ced63933bd92751366aa0b",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/feature_parser.py",
+      "source_relative": "utils/feature_parser.py",
+      "source_sha256": "62bc1ef43d4d19c2146d57ec88fbd227640ef506433062effb4f30aed01e2296",
+      "release_sha256": "62bc1ef43d4d19c2146d57ec88fbd227640ef506433062effb4f30aed01e2296",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/paths.py",
+      "source_relative": "utils/paths.py",
+      "source_sha256": "f7e728f24a5f89a27e10337e8c0c22b52ea99b7641463227b1063eb13a62c75f",
+      "release_sha256": "f7e728f24a5f89a27e10337e8c0c22b52ea99b7641463227b1063eb13a62c75f",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/pipeline_logger.py",
+      "source_relative": "utils/pipeline_logger.py",
+      "source_sha256": "c9f174cf993a05819a245de383859263bbaa9410b41abfcbb0c73982ef5ca79d",
+      "release_sha256": "c9f174cf993a05819a245de383859263bbaa9410b41abfcbb0c73982ef5ca79d",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/prompt_loader.py",
+      "source_relative": "utils/prompt_loader.py",
+      "source_sha256": "43fd06f3b81f5795e1caa4f8152c7154f5dbad0a851f9181d5f0a093bc4ceff2",
+      "release_sha256": "43fd06f3b81f5795e1caa4f8152c7154f5dbad0a851f9181d5f0a093bc4ceff2",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/slo.py",
+      "source_relative": "utils/slo.py",
+      "source_sha256": "e79e2852fb65f1dfb49156ec696b01d3bf49c9bf7ef3f0847e02a4fc09dc9bfa",
+      "release_sha256": "e79e2852fb65f1dfb49156ec696b01d3bf49c9bf7ef3f0847e02a4fc09dc9bfa",
+      "changes": []
+    },
+    {
+      "path": "components/pipeline/utils/timing.py",
+      "source_relative": "utils/timing.py",
+      "source_sha256": "466d84394b083f0c3b3872e14ad46fdd5d8e25fe0c26a3019d951dd551c83ee6",
+      "release_sha256": "466d84394b083f0c3b3872e14ad46fdd5d8e25fe0c26a3019d951dd551c83ee6",
+      "changes": []
+    }
+  ],
+  "excluded_source_candidates": [
+    {
+      "component": "webapp",
+      "path": "beneficiary_taxonomy.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "build_app_snapshot.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "build_graph_v1.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "score_chunks.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "digest_function/data_catalog.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "digest_function/email_service.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "digest_function/user_auth.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "digest_function/user_profile.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "Ready to Migrate to Server/build_diffs.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "Ready to Migrate to Server/data_catalog.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "Ready to Migrate to Server/run_daily.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "views/3_Network.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "digest_function/digest_timer/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "webapp",
+      "path": "digest_function/prompt_exporter/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "functions",
+      "path": "user_auth.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "functions",
+      "path": "user_profile.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "build_feature_importance.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "build_validation_tracker.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "investigate_flagged_bills.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "patch_bill_types.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "patch_disable_nightly_step7.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "patch_profile_scoring.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "patch_run_daily_v5.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "predictions_loader.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "rebuild_probability_trail (1).py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "rebuild_probability_trail.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "retrain_stage2.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "retrain_stage2_v4.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "retrain_stage2_v5.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "run_session_backfill.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "score_chunks.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "spot_check.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "state_text_normalization.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "upload_validation.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "verify_inventory.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "orchestration/main.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "orchestration/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "scripts/Automated_Retrieval_Illinois_Legislative_Bills_using_LegiScanAPI-Latest-v2.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "services/oracle_service.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "services/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "stages/embedder_tail.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "stages/parser.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "stages/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tests/smoke_test_blob.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tests/smoke_test_chunker.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tests/smoke_test_extractor.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tests/smoke_test_ingestion.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tests/smoke_test_vllm.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tests/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tools/apply_extractor_patches.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tools/fix_review_field_lists.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tools/perf_monitor.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tools/verify_ingestion_text.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tools/wipe_session_data.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "tools/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    },
+    {
+      "component": "pipeline",
+      "path": "utils/__init__.py",
+      "reason": "Not in selected entry-point/local-import closure; not evidence of disuse."
+    }
+  ],
+  "unresolved_source_findings": [],
+  "edition": "public"
+}

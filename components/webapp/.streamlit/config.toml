@@ -1,0 +1,32 @@
+# Force light theme regardless of the user's OS/browser dark-mode preference.
+# The app's cards, tables, and text colors are designed for a light background;
+# without this, dark-mode users see unreadable low-contrast text.
+[theme]
+base = "light"
+primaryColor = "#13294B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F8FAFC"
+textColor = "#1A2733"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+# wwwroot on App Service is an SMB (Azure Files) mount. Streamlit's file watcher
+# fires spurious change events there, and it also chokes walking torch.classes
+# (see "Examining the path of torch.classes raised" in the runtime log).
+# A deployed app must never hot-reload itself, so turn the watcher off entirely.
+fileWatcherType = "none"
+runOnSave = false
+headless = true
+
+[runner]
+# Bug 27 (QA showstopper, root cause found Nov 3 with a live run log): with
+# fast reruns ON, every key press abandons the run in progress. My Tracker does
+# a lot of work before it reaches its filters, so abandoned runs often ended
+# before drawing the slider, and Streamlit then discarded the slider's record:
+# the next run drew it at its default (QA: "sliders occasionally reset to 0").
+# OFF: each run finishes before the next starts, so widgets are always drawn
+# and their values are never discarded. Do not turn this back on.
+fastReruns = false

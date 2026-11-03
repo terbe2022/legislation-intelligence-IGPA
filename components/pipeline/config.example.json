@@ -1,0 +1,20 @@
+{
+  "legiscan": {
+    "api_key": ""
+  },
+  "states": {
+    "IL": {
+      "active_session_id": 2176,
+      "pipeline_output_dir": ""
+    }
+  },
+  "azure": {
+    "gold_container_sas_url": "",
+    "predictions_path_template": ""
+  },
+  "models_dir": "",
+  "download_dir": "",
+  "pipeline": {
+    "log_dir": ""
+  }
+}

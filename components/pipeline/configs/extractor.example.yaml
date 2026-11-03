@@ -1,0 +1,36 @@
+backend: vllm
+chunk_cache_enabled: false
+chunk_limit: null
+concurrency: 12
+flush_every_n_chunks: 25
+ollama:
+  model_name: llama3.1:8b
+  path: /usr/local/bin/ollama
+  timeout_seconds: 180
+prompt_path: prompts/feature_extraction_v1.txt
+prompt_version: v1
+sessions:
+  - 1801
+slos:
+  counts_max:
+    chunks_failed: 0
+  latency_max:
+    api_time.p50: 30.0
+    api_time.p99: 70.0
+  ratio_max:
+  - denominator: chunks_extracted
+    max: 0.3
+    numerator: parse_partial
+  throughput_min:
+    chunks_extracted_per_second: 0.1
+vllm:
+  base_url: http://localhost:8000/v1
+  max_tokens: 1024
+  model_name: llama31-8b-awq
+  system_prompt: null
+  temperature: 0.0
+  timeout_seconds: 180
+  top_p: 1.0
+warmup_enabled: true
+warmup_n: 3
+profile: llama31_1200

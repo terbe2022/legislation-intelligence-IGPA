@@ -1,0 +1,71 @@
+# Master pipeline config — PRODUCTION (llama31-8b-awq, chunk=1200)
+# Updated: 2026-06-10
+
+pipeline:
+  name: legislation
+  stages:
+    - ingestion
+    - chunker
+    - extractor
+    - standardizer
+    - embedder
+    - db_writer
+
+ingestion:
+  sources:
+    - legiscan
+  lookback_days: 7
+
+chunker:
+  sessions:
+    - 2176
+  mode: live
+  bill_limit: null
+  encoding: cl100k_base
+  max_tokens: 1200
+  overlap_tokens: 120
+  massive_threshold_tokens: 80000
+  massive_first_n: 5
+  massive_last_n: 5
+  massive_middle_group_size: 10
+  hard_truncate_tokens: 50000
+
+extractor:
+  prompt_path: prompts/feature_extraction_v1.txt
+  prompt_version: v1
+  flush_every_n_chunks: 25
+  per_call_timeout_seconds: 180
+
+parser:
+  expected_fields:
+    - llama_summary
+    - legislative_goal
+    - policy_domain
+    - key_provisions
+    - intended_beneficiaries
+    - legislative_strategy
+    - increasing_aspects
+    - decreasing_aspects
+    - category_subcategory
+    - ideological_alignment
+    - potential_impact
+    - impact_rating
+    - intent
+    - motivation
+    - original_law
+
+standardizer:
+  impact_severity_order:
+    - "Not Impactful"
+    - "Slightly Impactful"
+    - "Moderately Impactful"
+    - "Very Impactful"
+
+embedder:
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+  index_version: 1
+  rebuild_full: false
+
+db_writer:
+  table_name: TBD_LEGISLATION_FEATURES
+  upsert_key: bill_id

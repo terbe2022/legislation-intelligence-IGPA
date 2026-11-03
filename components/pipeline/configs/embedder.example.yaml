@@ -1,0 +1,7 @@
+batch_size: 64
+index_version: 1
+mode: live
+model_name: <SET_LOCALLY>
+profile: llama31_1200
+sessions:
+- 2176

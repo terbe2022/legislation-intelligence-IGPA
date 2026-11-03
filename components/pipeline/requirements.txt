@@ -1,0 +1,28 @@
+# Storage
+azure-storage-blob>=12.19,<13.0
+python-dotenv>=1.0,<2.0
+
+# Data
+pandas>=2.0,<3.0
+pyarrow>=14.0,<20.0
+numpy>=1.24,<3.0
+
+# Oracle
+oracledb>=2.0,<4.0
+
+# HTTP (LegiScan ingestion)
+requests>=2.31,<3.0
+beautifulsoup4>=4.12,<5.0
+
+# NLP / chunking
+tiktoken>=0.5,<1.0
+
+# Embeddings (for FAISS stage; install separately if heavy)
+sentence-transformers>=2.2
+faiss-cpu>=1.7
+
+# Config
+pyyaml>=6.0
+
+# Logging / monitoring
+# (pipeline_logger.py uses only stdlib + pandas)

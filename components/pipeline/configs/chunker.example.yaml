@@ -1,0 +1,19 @@
+profile: llama31_1200
+sessions:
+- 2176
+mode: live
+bill_limit: null
+target_tokens: 1200
+chunk_floor: 600
+chunk_ceiling: 1800
+overlap_tokens: 200
+max_tokens: 1200
+massive_threshold_tokens: 80000
+massive_first_n: 5
+massive_last_n: 5
+massive_middle_group_size: 10
+hard_truncate_tokens: 50000
+slos:
+  throughput_min:
+    tokens_processed_per_second: 5000
+    bills_chunked_per_second: 5

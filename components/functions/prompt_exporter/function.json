@@ -1,0 +1,13 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "mytimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "%PROMPT_EXPORT_CRON%",
+      "runOnStartup": false,
+      "useMonitor": true
+    }
+  ]
+}

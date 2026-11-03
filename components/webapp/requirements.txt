@@ -1,0 +1,32 @@
+# Illinois Legislative Intelligence Platform — Azure App Service (Python 3.11 / Oryx build)
+# Pins below extend the proven-good set from the deployment reference doc.
+# pyarrow is REQUIRED for parquet — missing it = silent failure (per doc §9).
+
+# ── Proven-good pins from prior successful Oryx build ────────────────────────
+streamlit==1.37.1
+pandas==2.2.2
+numpy==1.26.4
+pyarrow==17.0.0
+plotly==5.23.0
+scikit-learn==1.4.2
+
+# ── Added for the unified multi-page app ─────────────────────────────────────
+scipy==1.13.1
+altair==5.3.0
+requests==2.32.3
+
+# ── Explorer page: vector search ─────────────────────────────────────────────
+faiss-cpu==1.8.0.post1
+sentence-transformers==3.0.1
+
+# ── Azure blob (only used by build_graph_v1.py --azure-upload; harmless here) ─
+azure-storage-blob==12.22.0
+python-dotenv==1.0.1
+
+# ── User auth: Azure Cosmos DB + Communication Services ──────────────────────
+azure-cosmos==4.7.0
+azure-communication-email==1.0.0
+openai==1.30.5
+httpx==0.27.2
+
+openpyxl==3.1.5
